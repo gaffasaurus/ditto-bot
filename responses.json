@@ -23,8 +23,7 @@
         "rust IDEAL",
         "interesting",
         "complex"
-      ],
-      "rate": 0.1
+      ]
     },
     {
       "name": "Chris Yao",
@@ -52,10 +51,9 @@
         "thats so quirky and edgy",
         "poggers.",
         "im popping off",
-        "https://tenor.com/view/hey-hey-ai-hayasaka-kaguya-sama-love-is-war-anime-smile-gif-17192606",
-        "https://cdn.discordapp.com/attachments/711793617529995297/741003866719387689/hqdefault_1.jpg"
-      ],
-      "rate": 0.1
+        "https://cdn.discordapp.com/attachments/711793617529995297/741003866719387689/hqdefault_1.jpg",
+        "bruh moment"
+      ]
     },
     {
       "name": "Gavin Jiang",
@@ -64,14 +62,7 @@
       "onTransform": "https://tenor.com/view/hey-hey-ai-hayasaka-kaguya-sama-love-is-war-anime-smile-gif-17192606",
       "responses":
       [
-        "https://tenor.com/view/evangelion-asuka-angry-gif-14807602",
-        "https://tenor.com/view/kakashi-hatake-lol-gif-13599150",
-        "https://tenor.com/view/naruto-smile-gif-5677612",
         "https://tenor.com/view/ai-hayasaka-kaguya-sama-love-is-war-jumping-happy-gif-17649191",
-        "https://tenor.com/view/mai-sakurajima-rascal-does-not-dream-of-bunny-girl-senpai-looking-searching-girl-gif-15988075",
-        "https://tenor.com/view/anime-nge-misato-disgusted-ew-gif-12069371",
-        "https://tenor.com/view/komi-anime-raining-rain-umbrella-gif-15993022",
-        "https://tenor.com/view/sakuta-azusagawa-bunny-girl-sakuramaji-mai-pinch-gif-17035325",
         "<:yob:718611772138848277>",
         "anime watch party anyone",
         "watch naruto",
@@ -80,9 +71,14 @@
         "????",
         "i want asuka to crush every bone in my body",
         "😳",
-        "where can i get a bunny girl gf"
-      ],
-      "rate": 0.1
+        "where can i get a bunny girl gf",
+        "LMAO",
+        "please watch bunny girl senpai THE TITLE IS MISLEADING",
+        "<@!418841751793565707> watch bunny girl",
+        "stfu",
+        "bruh",
+        ":flushed:"
+      ]
     },
     {
       "name": "Tiffany Chen",
@@ -113,8 +109,7 @@
         "ugh i want boba",
         "OMG HAHAHA",
         ":cowboy:"
-      ],
-      "rate": 0.1
+      ]
     },
     {
       "name": "CC Chen",
@@ -141,8 +136,7 @@
         "READ WEAK HERO",
         "<:bobabug:733873560606474251>",
         "epic"
-      ],
-      "rate": 0.1
+      ]
     },
     {
       "name": "Serena Li",
@@ -179,9 +173,9 @@
         "bruh",
         ".",
         "smH",
-        "sks"
-      ],
-      "rate": 0.1
+        "sks",
+        ">_>"
+      ]
     },
     {
       "name": "Michaela Seah",
@@ -210,11 +204,65 @@
         "im so fucking done",
         "i am so tired",
         "I NEED SOMETHING TO WRITE ABOUT AAAAAAA",
-        "i want to buy fake eyelashes",
-        "https://cdn.discordapp.com/attachments/722509110251356236/722941867410325555/destroyed.png",
-        "https://cdn.discordapp.com/attachments/722509110251356236/722940780670484590/crying.png"
-      ],
-      "rate": 0.1
+        "i want to buy fake eyelashes"
+      ]
+    },
+    {
+      "name": "Edmund Lam",
+      "id": "418827664304898048",
+      "mention": "<@!418827664304898048>",
+      "onTransform": "marcs brain is so big",
+      "responses":
+      [
+        "epic",
+        "bruh moment",
+        "lol",
+        "oof",
+        "lmao",
+        "optimal",
+        "OPTIMAL",
+        "scary",
+        "SCARY",
+        "playplace",
+        "very cool",
+        "ideal",
+        "uauu",
+        "gamer moment",
+        "complex",
+        "wifi cutting off at 1 am",
+        "kinky"
+      ]
+    },
+    {
+      "name": "Mina Oh",
+      "id": "455480346830438402",
+      "mention": "<@!455480346830438402>",
+      "onTransform": "hello",
+      "responses":
+      [
+        "ah",
+        "yeah",
+        "i see",
+        "hmmmm",
+        "argh",
+        "wow",
+        "huh?",
+        "terrific",
+        ":unamused:",
+        "haha",
+        "nah",
+        "arghh i need to go practice",
+        "shouldn't you be practicing?",
+        "jeez",
+        "suuuure",
+        "ah okay",
+        "oh",
+        "why?",
+        "...",
+        "very funny",
+        "seriously",
+        "oh crap i haven't practiced today"
+      ]
     },
     {
       "name": "Gamepro5",
@@ -243,8 +291,7 @@
         "LOL",
         "imagine being healthy",
         "fuck"
-      ],
-      "rate": 0.1
+      ]
     }
   ]
 }
