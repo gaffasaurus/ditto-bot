@@ -48,7 +48,7 @@ client.once('ready', async () => {
 		});
 		for (let person of people.people) {
 			if (members.includes(person.id)) {
-				availableForms[guild.id].push(person.id);
+				availableForms[guild.id].push(person);
 			}
 		}
 	});
@@ -75,13 +75,9 @@ client.on('message', async message => {
 			switch (mode) {
 				case 'random': {
 					if (modes[message.guild.id].random.value) {
-						let selected = Math.floor(Math.random() * people.people.length);
-						console.log(availableForms[message.guild.id]);
-						console.log(availableForms[message.guild.id].includes(people.people[selected].id));
+						let selected = Math.floor(Math.random() * availableForms[message.guild.id].length);
 						if (Math.random() < 0.3) {
-							if (availableForms[message.guild.id].includes(people.people[selected].id)) {
-								await transform(people.people[selected], message);
-							}
+							await transform(availableForms[message.guild.id][selected], message);
 						}
 					}
 				}
@@ -97,11 +93,24 @@ client.on('message', async message => {
         }
       }
       let selected = Math.floor(Math.random() * available.length);
-      if (Math.random() < rates[message.channel.id] || message.content === "<@!740746928186327072>") { // % chance to respond
+      if (Math.random() < rates[message.channel.id] || message.content.includes("<@!740746928186327072>") || message.content.includes("<@740746928186327072>")) { // % chance to respond
         sendWebhook(available[selected], currentForm.nickname, currentForm.avatar);
         available.splice(selected, 1);
+				if (message.content === "<@!740746928186327072>" || message.content === "<@740746928186327072>") {
+					try {
+						console.log("delete");
+						message.delete();
+					} catch {
+						console.log("Missing permissions to delete message!");
+					}
+				}
       }
-    }
+    } else if (message.content.includes("<@!740746928186327072>")) {
+			let embed = new Discord.MessageEmbed()
+				.setTitle('Ditto is not transformed!')
+				.setDescription('Use >transform to transform into someone or see >forms for a list of available forms')
+			message.channel.send(embed);
+		}
   } else {
     //process commands
   	const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -147,6 +156,7 @@ client.on('message', async message => {
 			  const valid = [];
 				const users = [];
 				const guild = client.guilds.cache.get(message.guild.id + "");
+				// console.log(modes[message.guild.id]);
 				if (modes[message.guild.id].exclusive.value) {
 	        guild.members.cache.forEach(member => {
 	          users.push(member.user);
@@ -223,10 +233,9 @@ client.on('message', async message => {
 						embed.setDescription(mode['random'].value ? "Ditto will transform randomly without being prompted to." : "Ditto will no longer transform randomly.");
 						embed.setColor('#FFC0CB');
 						message.channel.send(embed);
-						let selected = Math.floor(Math.random() * people.people.length)
-						if (availableForms.includes(people.people[selected].id)) {
-							await transform(people.people[selected], message);
-						}
+						getAvailableForms(mode, message);
+						let selected = Math.floor(Math.random() * availableForms[message.guild.id].length)
+						await transform(availableForms[message.guild.id][selected], message);
 						break;
 					}
 					case 'exclusive': {
@@ -234,28 +243,7 @@ client.on('message', async message => {
 						embed.setDescription(mode['exclusive'].value ? "Ditto will only be able to transform into members in the server." : "Ditto will be able to transform into any form.");
 						embed.setColor('#FFC0CB');
 						message.channel.send(embed);
-						if (!availableForms[message.guild.id]) {
-							availableForms[message.guild.id] = [];
-						}
-						if (mode['exclusive'].value) {
-							clearArray(availableForms[message.guild.id]);
-							const users = [];
-							message.guild.members.cache.forEach(member => {
-								users.push(member.user);
-							});
-							for (let user of users) {
-								for (let person of people.people) {
-									if (person.id && person.id === user.id) {
-										availableForms[message.guild.id].push(person.id);
-									}
-								}
-							}
-						} else {
-							clearArray(availableForms[message.guild.id]);
-							for (let person of people.people) {
-								availableForms[message.guild.id].push(person.id);
-							}
-						}
+						getAvailableForms(mode, message);
 						break;
 					}
 				}
@@ -298,14 +286,17 @@ client.on('message', async message => {
           return;
         }
         let valid = false;
+				outer:
         for (let person of people.people) {
           if (args.join(" ").toLowerCase() === person.name.toLowerCase() || args[0] === person.mention || (person.id && args === person.id) || (person.username && args.join(" ").toLowerCase() === person.username.toLowerCase())) {
-						if (availableForms[message.guild.id].includes(person.id)) {
-							let currentForm = await transform(person, message);
-	            // sendWebhook("Transformed into " + person.name + "!", transformed.nickname, transformed.avatar);
-	            sendWebhook(currentForm.onTransform, currentForm.nickname, currentForm.avatar);
-	            valid = true;
-	            break;
+						for (let availableForm of availableForms[message.guild.id]) {
+							if (availableForm.id === person.id) {
+								let currentForm = await transform(person, message);
+		            // sendWebhook("Transformed into " + person.name + "!", transformed.nickname, transformed.avatar);
+		            sendWebhook(currentForm.onTransform, currentForm.nickname, currentForm.avatar);
+		            valid = true;
+		            break outer;
+							}
 						}
           }
         }
@@ -321,6 +312,31 @@ client.on('message', async message => {
     }
   }
 });
+
+function getAvailableForms(mode, message) {
+	if (!availableForms[message.guild.id]) {
+		availableForms[message.guild.id] = [];
+	}
+	if (mode['exclusive'].value) {
+		clearArray(availableForms[message.guild.id]);
+		const users = [];
+		message.guild.members.cache.forEach(member => {
+			users.push(member.user);
+		});
+		for (let user of users) {
+			for (let person of people.people) {
+				if (person.id && person.id === user.id) {
+					availableForms[message.guild.id].push(person);
+				}
+			}
+		}
+	} else {
+		clearArray(availableForms[message.guild.id]);
+		for (let person of people.people) {
+			availableForms[message.guild.id].push(person);
+		}
+	}
+}
 
 async function transform(person, message) {
 	transformed[message.guild.id] = {};

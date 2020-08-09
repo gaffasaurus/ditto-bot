@@ -22,7 +22,8 @@
         "epicques",
         "rust IDEAL",
         "interesting",
-        "complex"
+        "complex",
+        "alarming"
       ]
     },
     {
@@ -240,28 +241,51 @@
       "onTransform": "hello",
       "responses":
       [
-        "ah",
-        "yeah",
-        "i see",
+        "Ah",
+        "Yeah",
+        "I see",
         "hmmmm",
         "argh",
         "wow",
-        "huh?",
+        "huh??",
         "terrific",
         ":unamused:",
         "haha",
-        "nah",
-        "arghh i need to go practice",
-        "shouldn't you be practicing?",
-        "jeez",
+        "Arghh i need to go practice",
+        "Sure you can",
+        "Shouldn't you be practicing?",
         "suuuure",
-        "ah okay",
-        "oh",
-        "why?",
+        "Ah okay",
+        "Oh",
+        "Why?",
         "...",
-        "very funny",
-        "seriously",
-        "oh crap i haven't practiced today"
+        "Very funny",
+        "Seriously",
+        "Oh crap i haven't practiced today",
+        "Argh I hate Ravel",
+        "I suppose so",
+        "What now?"
+      ]
+    },
+    {
+      "name": "Andrew Hu",
+      "id": "387797368059461634",
+      "mention": "<@!387797368059461634>",
+      "onTransform": "potkeke!",
+      "responses":
+      [
+        "lol!",
+        "oof!",
+        "scary!",
+        "wow!",
+        "rip!",
+        "omegalul!",
+        "lmao!",
+        "topkeke!",
+        "ok simp",
+        "simp",
+        "strange",
+        "^"
       ]
     },
     {
@@ -291,6 +315,78 @@
         "LOL",
         "imagine being healthy",
         "fuck"
+      ]
+    },
+    {
+      "name": "Alex Bishop",
+      "id": "300048820887224320",
+      "mention": "<@!300048820887224320>",
+      "onTransform": "whats up buddy",
+      "responses":
+      [
+        "bruh",
+        "ok buddy",
+        "sure",
+        "same",
+        "LOL",
+        "NICE",
+        "does anyone here listen to the wombats",
+        "what do you want",
+        "does anyone want to build a waterslide",
+        "send feet pics",
+        "i have a crippling porn addiction",
+        "I WATCH YOU JACK OFF TO GROSS JAPANESE PORN EVERY NIGHT YOU DONT DESERVE LOVE  YOU SICK PIECE OF SHIT",
+        "i enjoy nugget porn",
+        "sad",
+        "bitch boy",
+        "saber best girl",
+        "i love fate",
+        "shut up",
+        "are you retarded?",
+        "you're cringe",
+        "murph from the wombats is so sexy",
+        "?",
+        "me and the gf https://cdn.discordapp.com/attachments/622235237585518618/741953235631210526/image0.jpg",
+        "oh boy here we go again",
+        "felt cute might delete later https://cdn.discordapp.com/attachments/622235237585518618/741956678106218496/image0.jpg",
+        "fun night https://cdn.discordapp.com/attachments/622235237585518618/741956781730824233/image0.jpg",
+        "https://cdn.discordapp.com/attachments/622235237585518618/739712788750139432/image0.jpg",
+        "warframe is better than destiny"
+      ]
+    },
+    {
+      "name": "Neo Patel",
+      "id": "183347364029792256",
+      "mention": "<@!183347364029792256>",
+      "onTransform": "Hey!",
+      "responses":
+      [
+        "ok buddy",
+        "<@!300048820887224320> <@!355956486603669504> pm",
+        "no uterus no opinion",
+        "I am a gay emo furry",
+        "bitch idc if you asparagus go lick my balls",
+        "https://www.youtube.com/watch?v=w1yogi3aLfA",
+        "https://cdn.discordapp.com/attachments/622235237585518618/741960996721131570/video0.mp4",
+        "https://cdn.discordapp.com/attachments/622235237585518618/741960659134054410/image0.jpg",
+        "does anyone want to play tetris",
+        "you are a fake fan!",
+        "bruh",
+        "Noob",
+        "do you know who i am",
+        "todokete setsunasa ni wa namae",
+        "its joke!",
+        "i jest",
+        "riko laser beam!",
+        "<@!300048820887224320> you are toxic",
+        "Bro",
+        "Kevin",
+        "<@!340688782112194561> Kevin please",
+        "shut up rich boy",
+        "wym",
+        "<@!300048820887224320> the only game you know is warframe",
+        "Give me the money to buy csgo skins",
+        "hey its me, popular online personality and internet sensation Neo Patel!"
       ]
     }
   ]
